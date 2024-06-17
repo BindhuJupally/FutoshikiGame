@@ -870,10 +870,7 @@ class DemonSlayerTournament:
         self.player = self.instance.media_player_new()
         media = self.instance.media_new(self.video_path)
         self.player.set_media(media)
-        self.player.set_hwnd(self.label.winfo_id())  # for Windows
-        # self.player.set_xwindow(self.label.winfo_id())  # for Linux
-        # self.player.set_nsobject(self.label.winfo_id())  # for macOS
-
+        self.player.set_hwnd(self.label.winfo_id())
         self.check_video_end()
         self.player.play()
 
